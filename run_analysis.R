@@ -1,14 +1,14 @@
 #This is the required script
 #First and foremost we should import activity labels and features TXT file to our environment, naming significant columns with descriptive labels
 
-activity_labels <- read.table("C:/Users/Fatima Zahra Ayad/Documents/UCI HAR Dataset/activity_labels.txt", header = FALSE, col.names = c("ActivityLabel","ActivityName"))
-features <- read.table("C:/Users/Fatima Zahra Ayad/Documents/UCI HAR Dataset/features.txt", header = FALSE)
+activity_labels <- read.table("/UCI HAR Dataset/activity_labels.txt", header = FALSE, col.names = c("ActivityLabel","ActivityName"))
+features <- read.table("/UCI HAR Dataset/features.txt", header = FALSE)
 
 #Then import our training data set, vectors of values from the X_train file and the correspondant subjects to each vector from y_train file, naming significant columns with descriptive labels
 
-subject_train <- read.table("C:/Users/Fatima Zahra Ayad/Documents/UCI HAR Dataset/train/subject_train.txt", header = FALSE, col.names = c("Subject"))
-X_train <- read.table("C:/Users/Fatima Zahra Ayad/Documents/UCI HAR Dataset/train/X_train.txt", header = FALSE, col.names = features$V2)
-y_train <- read.table("C:/Users/Fatima Zahra Ayad/Documents/UCI HAR Dataset/train/y_train.txt", header = FALSE, col.names = c("ActivityLabel"))
+subject_train <- read.table("/UCI HAR Dataset/train/subject_train.txt", header = FALSE, col.names = c("Subject"))
+X_train <- read.table("/UCI HAR Dataset/train/X_train.txt", header = FALSE, col.names = features$V2)
+y_train <- read.table("/UCI HAR Dataset/train/y_train.txt", header = FALSE, col.names = c("ActivityLabel"))
 
 #We merge then the data frame that resulted from coersing X_train,y_train to link each vector of values with the corresponding activity  
 
@@ -18,9 +18,9 @@ final_train <-merge(
 
 #We follow the same previous steps for the test dataset
 
-subject_test <- read.table("C:/Users/Fatima Zahra Ayad/Documents/UCI HAR Dataset/test/subject_test.txt", header = FALSE, col.names = c("Subject"))
-X_test <- read.table("C:/Users/Fatima Zahra Ayad/Documents/UCI HAR Dataset/test/X_test.txt", header = FALSE, col.names = features$V2)
-y_test <- read.table("C:/Users/Fatima Zahra Ayad/Documents/UCI HAR Dataset/test/y_test.txt", header = FALSE, col.names = c("ActivityLabel"))
+subject_test <- read.table("/UCI HAR Dataset/test/subject_test.txt", header = FALSE, col.names = c("Subject"))
+X_test <- read.table("/UCI HAR Dataset/test/X_test.txt", header = FALSE, col.names = features$V2)
+y_test <- read.table("UCI HAR Dataset/test/y_test.txt", header = FALSE, col.names = c("ActivityLabel"))
 final_test <-merge(
   cbind(subject_test,y_test,X_test)
   ,activity_labels,by = "ActivityLabel")
