@@ -15,7 +15,7 @@
 
 ## About features:
 <ol>
-  <li>Feature selection :</li><br>
+  <li>Feature selection :<br>
         The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals<i>tAcc-XYZ</i> and<i>tGyro-XYZ</i>. These time domain signals (prefix 't' to denote <b>time</b>) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals(<i>tBodyAcc-XYZ</i> and<i>tGravityAcc-XYZ</i>) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
         Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (<i>tBodyAccJerk-XYZ</i> and<i>tBodyGyroJerk-XYZ</i>). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (<i>tBodyAccMag</i>,<i>tGravityAccMag</i>,<i>tBodyAccJerkMag</i>, <i>tBodyGyroMag</i>, <i>tBodyGyroJerkMag</i>). 
         Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing<i>fBodyAcc-XYZ</i>, <i>fBodyAccJerk-XYZ</i>, <i>fBodyGyro-XYZ</i>, <i>fBodyAccJerkMag</i>, <i>fBodyGyroMag</i>, <i>fBodyGyroJerkMag</i>.<br>(Note the 'f' to indicate frequency domain signals).
@@ -42,8 +42,8 @@
     <tr><td>fBodyGyroMag</td></tr>
     <tr><td>fBodyGyroJerkMag</td></tr>
   </table>
-   
- <li>Describing features :</li><br>
+   </li> 
+ <li>Describing features :<br>
         The HAR dataset is described by 561 features estimated from the previous 17 measurements,either by calculating their mean, standard deviation,median absolute deviation and many others functions presented in teh tables that follows:
         <table style="width:100%">
   <tr>
@@ -139,7 +139,25 @@
   <tr>
     <td>tBodyGyroJerkMean</td>
   </tr>
+  </table>
+  </li>
+</ol> 
+<br>
 
+## About Files:<br>
+
+`CodeBook.md` a code book that describes the variables, the data, and any transformations or work that I performed to clean up the data
+
+`run_analysis.R` performs the data preparation and then followed by the 5 steps required as described in the course project’s definition:
+<ul>
+  <li> Merges the training and the test sets to create one data set.</li>
+  <li> Extracts only the measurements on the mean and standard deviation for each measurement.</li>
+  <li>Uses descriptive activity names to name the activities in the data set.</li>
+  <li>Appropriately labels the data set with descriptive variable names.</li>
+  <li>From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.</li>
+</ul>
+
+`FinalData.txt` is the exported final data after going through all the sequences described above
 
 
  
