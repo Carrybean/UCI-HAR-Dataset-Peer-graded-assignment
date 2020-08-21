@@ -42,7 +42,7 @@
     <tr><td>fBodyGyroJerkMag</td></tr>
   </table>
    
- <li>Describing features :</li>
+ <li>Describing features :</li><br>
         The HAR dataset is described by 561 features estimated from the previous 17 measurements,either by calculating their mean, standard deviation,median absolute deviation and many others functions presented in teh tables that follows:
         <table style="width:100%">
   <tr>
